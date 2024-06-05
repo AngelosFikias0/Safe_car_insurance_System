@@ -4,8 +4,8 @@ import java.util.*;
 public class SafeCar {
     public static void main(String[] args) {
     	//lists
-    	List<Customer> customerlist=new ArrayList<Customer>();  
-    	List<Vehicle> vehiclelist=new ArrayList<Vehicle>();
+    	CustomerList customerlist = new CustomerList();
+    	VehicleList vehiclelist = new VehicleList();
     	List<InsurancePolicy> insPlist=new ArrayList<InsurancePolicy>();
     	List<InsuranceContract> insClist=new ArrayList<InsuranceContract>();
     	
@@ -24,10 +24,15 @@ public class SafeCar {
                 // Create customers
                 Customer customer1 = new Customer("Maria", "Papadopoulou", "2310264368", "maria.papadopoulou@gmail.com", "AO79432");
                 customerlist.add(customer1);
-                Customer customer2 = new Customer("Evanthia", "Papagianni", "2310245368", "evanthia.papagianni@gmail.com", "AO79432");
+                Customer customer2 = new Customer("Evanthia", "Papagianni", "2310245368", "evanthia.papagianni@gmail.com", "AO77813");
                 customerlist.add(customer2);
-                Customer customer3 = new Customer("Vasilis", "Karagiannis", "2310245668", "ioannis.karagiannis@gmail.com", "AO79432");
+                Customer customer3 = new Customer("Vasilis", "Karagiannis", "2310245668", "ioannis.karagiannis@gmail.com", "AO45698");
                 customerlist.add(customer3);
+                //Test scenario for adding the same customer twice:
+                System.out.println("\nTest for inputing the same customer twice:");
+                Customer customer4 = new Customer("Vasilis", "Karagiannis", "2310245668", "ioannis.karagiannis@gmail.com", "AO45698");
+                customerlist.add(customer4);
+                
                 //print success
                 System.out.println("New customers have been created");
                 
@@ -38,6 +43,11 @@ public class SafeCar {
                 vehiclelist.add(vehicle2);
                 Vehicle vehicle3 = new Vehicle("Ford", "Ranger", "2022", "KOH4681", "7C3FR76A55504645");
                 vehiclelist.add(vehicle3);
+                //Test scenario for adding the same customer twice:
+                System.out.println("\nTest for inputing the same vehicle twice:");
+                Vehicle vehicle4 = new Vehicle("Ford", "Ranger", "2022", "KOH4681", "7C3FR76A55504645");
+                vehiclelist.add(vehicle4);
+                
                 //print success
                 System.out.println("New vehicles have been created");
                 
@@ -148,7 +158,7 @@ public class SafeCar {
                     continueInput = scanner.nextLine().charAt(0);
                 }
                 System.out.println("Insurance contracts have been created.\n");
-            */
+                */
                 
                 //Add insurance to the customer it matches
                 customer1.addInsuranceContract(insuranceContract1);
@@ -156,26 +166,10 @@ public class SafeCar {
                 customer2.addInsuranceContract(insuranceContract3);
                 
                 // Print customer details
-                System.out.println("Customers: ");
-                for(Customer customer:customerlist) {
-                	customer.printData();
-                }
-                System.out.println();
-                
-                // Print insurance details for each customer
-                System.out.println("Insurance Contracts for Customers:");
-                customer1.printInsuranceDetails();
-                System.out.println();
-                customer2.printInsuranceDetails();
-                System.out.println();
-                customer3.printInsuranceDetails();
+                customerlist.printData();
                 
                 // Print vehicle details
-                System.out.println("\nVehicles: ");
-                for(Vehicle vehicle:vehiclelist) {
-                	vehicle.printData();
-                }
-                System.out.println();
+                vehiclelist.printData();
                 
                 // Print Insurance policy details
                 System.out.println("Insurance policies: ");
