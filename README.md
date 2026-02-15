@@ -1,155 +1,208 @@
 # 🚗 SafeCar Insurance Management System
 
-> 💼 A complete Java-based simulation of an insurance agency information system  
-> 📍 University of Macedonia · Department of Applied Informatics · Team Project
+A Java-based insurance agency management simulation built using structured systems analysis and design methodologies.
 
-
-> 📍 **University of Macedonia** – Department of Applied Informatics  
-> 🧪 **Course**: Systems Analysis and Design  
-> 👨‍👩‍👦‍👦 **Team Size**: 5 Students  
-> 🛠️ **Tech Stack**: Java · Eclipse · Visual Paradigm · Figma · Jira · GitHub
+**University of Macedonia**  
+Department of Applied Informatics  
+Course: Systems Analysis and Design  
+Team: 5 Members  
 
 ---
 
-## 🧠 Project Overview
+## 📌 Executive Summary
 
-SafeCar is a small insurance agency that operated using manual processes and lacked any integrated information system. This project simulates the digital transformation of the business using modern systems analysis and design methodologies, ending in a **working Java prototype** based on a detailed UML design.
+SafeCar models the digital transformation of a small insurance agency that previously relied on manual workflows.
 
----
+The project covers the full SDLC:
 
-## 🎯 Project Objectives
+- Business analysis  
+- UML modeling  
+- Architectural design  
+- Java implementation  
+- UI prototyping  
+- Agile task management with Jira  
 
-- Replace error-prone manual operations (OpenOffice, paper forms)
-- Automate and streamline insurance-related workflows
-- Model the full lifecycle of insurance operations (proposals, contracts, claims)
-- Align business strategy with technical implementation
-- Practice end-to-end SDLC using real tools, methods, and deliverables
-
----
-
-## 💼 Key Features
-
-### 🛠️ Functional Scope
-- Insurance Proposals and Contracts  
-- Customer & Vehicle Management  
-- Claims and Damage Reports  
-- Role-Based Access System (Director, Agent, Expert)  
-- Automated Document Handling  
-- Statistical Reporting
-
-### 🔐 Security
-- Enforced access control by role  
-- Clients **cannot** access the system (internal use only)  
-
-### 🌐 External Integrations
-- Police Systems (Accident Reports)  
-- Insurance Partners  
-- Third-party Assessors  
+The result is a working object-oriented Java prototype aligned with documented business requirements.
 
 ---
 
-## 🧱 Main Java Classes
+## 🎯 Problem Statement
 
-While the UML design generated many classes, the simulation primarily uses the following:
+The agency operated with:
 
-| Class               | Responsibility                                      |
-|---------------------|------------------------------------------------------|
-| `SafeCar`           | Main class (entry point)                             |
-| `Customer`          | Holds customer information                          |
-| `Vehicle`           | Represents vehicle data                             |
-| `InsurancePolicy`   | Defines insurance plan offerings                    |
-| `InsuranceContract` | Manages policy contracts per customer               |
-| `CustomerList`      | Aggregates all customers in memory                  |
-| `VehicleList`       | Aggregates all registered vehicles                  |
+- Paper forms  
+- OpenOffice documents  
+- Manual claim tracking  
+- No centralized customer management  
+- No reporting capability  
+
+This led to:
+
+- Data inconsistencies  
+- Operational delays  
+- Limited scalability  
+
+SafeCar addresses these gaps through structured system design and automation.
 
 ---
 
-## 🧱 System Architecture
+## 🏗️ System Architecture
 
-### 📐 Modeling Techniques Used
-- Use Case Diagrams + Narratives  
-- Class & Object Diagrams  
+### Architecture Approach
+
+- Use case-driven design  
+- Object-oriented modeling  
+- Layered responsibility separation  
+
+### Modeling Techniques
+
+- Use Case Diagrams and Narratives  
+- Class Diagrams  
 - Sequence Diagrams  
-- Zachman Framework  
-- TOGAF Views  
-- Business Process Modeling (AS-IS / TO-BE)
-
-### 🎨 UI/UX
-Designed in Figma with interactive mockups.
-
-- 🧭 Sitemap: [Figma Sitemap](https://www.figma.com/board/V5BkCnkzIAC95bBLTpt9E5)
-- 🖼️ Mockups: Designed based on user stories and use cases
+- Business Process Modeling AS-IS / TO-BE  
+- Zachman Framework viewpoints  
+- TOGAF-inspired architectural views  
 
 ---
 
-## 💻 Implementation Stack
+## 💻 Technical Stack
 
-| Component           | Details                             |
-|---------------------|--------------------------------------|
-| Language            | Java                                 |
-| IDE                 | Eclipse (2023-09)                    |
-| OS                  | Windows 11                           |
-| Modeling            | Visual Paradigm                      |
-| Version Control     | Git + GitHub                         |
-| UI Prototyping      | Figma                                |
-| Task Management     | Jira (Kanban)                        |
-| Team Communication  | Skype + Google Drive                 |
+| Area | Technology |
+|------|------------|
+| Language | Java |
+| IDE | Eclipse 2023-09 |
+| Modeling | Visual Paradigm |
+| UI Prototyping | Figma |
+| Version Control | Git + GitHub |
+| Task Management | Jira (Kanban Board) |
+| Documentation | PDF + UML Artifacts |
+
+---
+
+## 📊 Agile & Project Management
+
+The team used Jira for structured task tracking.
+
+Jira setup included:
+
+- Kanban board  
+- Epics aligned with SDLC phases  
+- User stories derived from use cases  
+- Task breakdown per module  
+- Sprint reviews for validation  
+
+Workflow example:
+
+Backlog → In Progress → Code Review → Done
+
+Artifacts tracked:
+
+- Requirements  
+- Design tasks  
+- Implementation tickets  
+- Bug reports  
+
+This ensured traceability from business requirements to code.
+
+---
+
+## 🧠 Core Domain Model
+
+| Class | Responsibility |
+|-------|---------------|
+| `SafeCar` | Application entry point |
+| `Customer` | Customer entity |
+| `Vehicle` | Vehicle entity |
+| `InsurancePolicy` | Insurance plan definition |
+| `InsuranceContract` | Policy contract management |
+| `CustomerList` | In-memory customer aggregation |
+| `VehicleList` | In-memory vehicle aggregation |
+
+The implementation follows:
+
+- Encapsulation  
+- Separation of concerns  
+- Clean OOP structure  
+
+---
+
+## 🔐 Access Control Model
+
+Internal role-based system.
+
+Roles:
+
+- Director  
+- Agent  
+- Insurance Expert  
+
+Clients do not access the system.
+
+Permissions are enforced at logic level.
+
+---
+
+## 🔄 External System Interactions
+
+Simulated integrations with:
+
+- Police systems for accident reports  
+- Insurance partners  
+- Third-party assessors  
+
+Modeled using sequence diagrams.
 
 ---
 
 ## 📈 Business Impact Simulation
 
-| Metric                        | Estimate         |
-|------------------------------|------------------|
-| Sales Growth                 | +30%             |
-| Revenue Growth               | +20%             |
-| ROI                          | **15.23%**       |
-| Manual Process Reduction     | High             |
-| Strategic Alignment          | Strong           |
+Estimated impact after adoption:
+
+- +30% sales growth  
+- +20% revenue growth  
+- 15.23% ROI  
+- Significant reduction in manual errors  
+- Improved strategic alignment  
 
 ---
 
-## 🔄 Project Lifecycle
+## 📁 Project Structure
+```text
+src/
+docs/
+README.md
+LICENSE
+```
 
-1. **Preparation**  
-   System Request, Feasibility Study, Project Planning  
-2. **Analysis**  
-   Requirements Engineering, Process Modeling (BPM, UML)  
-3. **Design**  
-   Architecture (Zachman, TOGAF), Class/Sequence Diagrams  
-4. **Implementation**  
-   Code, UI, Integration & Demo  
 
-📄 Full PDF Report: `docs/SystemsAnalysisAndDesignProject.pdf`
+Full report available at:
 
----
-
-## ✅ Outcomes
-
-- Working Java simulation aligned with the business case  
-- Demonstrated ability to move from **modeling to execution**  
-- High code maintainability (OOP + clean structure)  
-- UI/UX concepts applied with real tools  
-- Realistic documentation & agile collaboration tools used
+[Full Project Report](docs/SystemsAnalysisAndDesignProject.pdf)
 
 ---
 
-## 💡 Lessons Learned
+## 🧪 What This Project Demonstrates
 
-- Turning vague client needs into structured systems  
-- Applying professional SDLC end-to-end  
-- Cross-role collaboration and documentation  
-- Managing complexity with proper architecture and tools
+- Translation of business needs into technical requirements  
+- Structured architecture design  
+- UML aligned with implementation  
+- Working Java prototype delivery  
+- Agile collaboration with Jira  
+- Version control with Git workflows  
 
 ---
 
 ## 🔗 Resources
 
-- 📁 [Project PDF Report](/SystemsAnalysisAndDesignProject.pdf)  
-- 💻 [GitHub Code Repository](https://github.com/AngelosFikias0/Safa_car_insurance_assignment.java)  
-- 🎨 [Figma UI Prototype](https://www.figma.com/board/V5BkCnkzIAC95bBLTpt9E5)  
-- 📚 [Visual Paradigm Docs](https://www.visualparadigm.com/support/documents/vpuserguide.jsp)
+GitHub Repository  
+https://github.com/AngelosFikias0/Safa_car_insurance_assignment.java  
+
+Figma Prototype  
+https://www.figma.com/board/V5BkCnkzIAC95bBLTpt9E5  
+
+Visual Paradigm Documentation  
+https://www.visualparadigm.com/support/documents/vpuserguide.jsp  
 
 ---
 
-> 🏁 *This project showcases how software engineering and business thinking merge in real-world system design. Built by students, ready for production-level improvement.*  
+This project demonstrates structured systems thinking, disciplined execution, and alignment between business analysis and technical implementation.
