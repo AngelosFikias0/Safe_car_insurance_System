@@ -1,4 +1,4 @@
-# 🚗 SafeCar Insurance Management System
+# SafeCar Insurance Management System
 
 A Java-based insurance agency management simulation built using structured systems analysis and design methodologies.
 
